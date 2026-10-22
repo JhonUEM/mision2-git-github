@@ -8,3 +8,7 @@ class TestAccuracy(unittest.TestCase):
 
     def test_accuracy_parcial(self):
         self.assertAlmostEqual(calcular_accuracy([1, 0, 1, 1], [1, 1, 1, 0]), 0.5)
+
+    def test_rechaza_listas_vacias(self):
+        with self.assertRaises(ValueError):
+            calcular_accuracy([], [])
