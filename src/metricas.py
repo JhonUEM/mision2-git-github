@@ -10,5 +10,7 @@ def contar_aciertos(valores_reales, valores_predichos):
 
 def calcular_accuracy(valores_reales, valores_predichos):
     """Devuelve la proporción de aciertos, entre 0 y 1."""
+    if len(valores_reales) == 0:
+        raise ValueError("Las listas no pueden estar vacías")
     aciertos = contar_aciertos(valores_reales, valores_predichos)
     return aciertos / len(valores_reales)
