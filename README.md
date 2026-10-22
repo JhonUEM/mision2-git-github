@@ -22,3 +22,13 @@ python -m unittest discover -s tests -v
 
 ## Colaboración
 Usad ramas `feature/*`, Pull Requests y revisiones de compañeros.
+
+## Requisitos
+- Python 3.10 o superior
+- Git
+
+## Resultado esperado
+Al ejecutar `python -m src.predictor` se muestra la clase predicha y la real, por ejemplo:
+`Predicción: 0 | Clase real: 0`
+Los tests deben terminar con `OK`.
+
