@@ -12,3 +12,7 @@ class TestAccuracy(unittest.TestCase):
     def test_rechaza_listas_vacias(self):
         with self.assertRaises(ValueError):
             calcular_accuracy([], [])
+
+    def test_rechaza_longitudes_distintas(self):
+        with self.assertRaises(ValueError):
+            calcular_accuracy([1, 0], [1])
