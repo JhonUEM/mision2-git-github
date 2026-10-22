@@ -3,6 +3,8 @@ from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
+from src.metricas import calcular_accuracy
+
 
 def entrenar_modelo():
     datos = load_iris()
@@ -20,6 +22,14 @@ def predecir_ejemplo():
     return int(predicciones[0]), int(y_test[0])
 
 
+def evaluar_modelo():
+    """Calcula la accuracy del modelo sobre las flores de test."""
+    modelo, x_test, y_test = entrenar_modelo()
+    predicciones = modelo.predict(x_test)
+    return calcular_accuracy(list(y_test), list(predicciones))
+
+
 if __name__ == "__main__":
     predicho, real = predecir_ejemplo()
     print(f"Predicción: {predicho} | Clase real: {real}")
+    print(f"Accuracy en test: {evaluar_modelo():.2f}")
