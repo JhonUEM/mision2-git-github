@@ -1,4 +1,4 @@
-# Proyecto IA — Clasificador de flores
+# Clasificador de flores con scikit-learn
 Prototipo de clasificación con el dataset Iris integrado en scikit-learn. Se utiliza para practicar Git/GitHub, no para evaluar calidad predictiva.
 
 ## Instalación
